@@ -34,7 +34,7 @@ pipeline {
                 sh '''
                     docker run --name tryfr${BUILD_NUMBER} -p 8000:8000 -d lisovska/devops-django:v${BUILD_NUMBER}
                     docker ps
-                    sleep 20
+                    sleep 40
                     docker stop tryfr${BUILD_NUMBER}
                     docker ps
                     docker rm tryfr${BUILD_NUMBER}
